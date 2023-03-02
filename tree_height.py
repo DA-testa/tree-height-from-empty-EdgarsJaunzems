@@ -13,12 +13,12 @@ def compute_height(n, parents):
         if parents[node] == -1:
             h[node] = 1
         else:
-            h[node] = aprekins(parents[node]) + 1
+            h[node] = cal(parents[node]) + 1
         return h[node]
     max_height = 0
     # Your code here
     for a in range(n):
-        max_height = max(max_height, aprekins(a))
+        max_height = max(max_height, cal(a))
     return max_height
 
 
